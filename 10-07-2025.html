@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Aligned Form</title>
+    <title>Centered Form</title>
+    <style>
+        /* Make body full screen and use flexbox to center content */
+        body {
+            background-color: lightblue;
+            height: 100vh; /* Full viewport height */
+            margin: 0;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center;     /* Center vertically */
+        }
+    </style>
 </head>
+
 <body>
 
-<div style="width: 300px; margin: auto;">
+<!-- Main form container with red border and white background -->
+<div style="width: 300px; padding: 20px; border: 2px solid red; background-color: white;">
+
+    <!-- Heading of the form -->
     <h2>User Information Form</h2>
+
+    <!-- Form starts here -->
     <form action="#" method="post">
+        
+        <!-- Name input field -->
         <div style="margin-bottom: 10px;">
             <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" required>
         </div>
 
+        <!-- Email input field -->
         <div style="margin-bottom: 10px;">
             <label for="email">Email:</label><br>
             <input type="email" id="email" name="email" required>
         </div>
 
+        <!-- Password input field -->
         <div style="margin-bottom: 10px;">
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" required>
         </div>
 
+        <!-- Age input field -->
         <div style="margin-bottom: 10px;">
             <label for="age">Age:</label><br>
             <input type="number" id="age" name="age" required>
         </div>
 
+        <!-- Mobile number input field -->
         <div style="margin-bottom: 10px;">
             <label for="mobile">Mobile Number:</label><br>
             <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
         </div>
 
+        <!-- Submit and Reset buttons -->
         <div>
             <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
         </div>
+
     </form>
+    <!-- Form ends here -->
+
 </div>
+<!-- End of main form container -->
 
 </body>
 </html>
