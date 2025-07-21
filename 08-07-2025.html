@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discovery Land Company - Gallery</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic&family=Roboto:wght@400;700&display=swap');
+
+    /* Reset & basics */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0a0a0a;
+      color: white;
+      overflow-x: hidden;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container for the entire page */
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: saturate(180%) blur(10px);
+      border-bottom: 1px solid rgba(255 255 255 / 0.1);
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: white;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-icon {
+      width: 26px;
+      height: 26px;
+      border: 2px solid white;
+      border-radius: 50%;
+      position: relative;
+      /* Compass rose style */
+    }
+    .logo-icon::before,
+    .logo-icon::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background: white;
+      border-radius: 1px;
+      transform-origin: center;
+    }
+    .logo-icon::before {
+      width: 50%;
+      height: 2px;
+      transform: translate(-50%, -50%);
+    }
+    .logo-icon::after {
+      width: 2px;
+      height: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .logo-text {
+      font-family: 'Gentium Book Basic', serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+    .logo-text .company-name {
+      font-weight: 600;
+    }
+    .logo-text .company-sub {
+      font-weight: 400;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      opacity: 0.7;
+      margin-top: 2px;
+    }
+    nav {
+      display: flex;
+      gap: 28px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    nav a {
+      position: relative;
+      padding: 4px 0;
+    }
+    nav a[aria-current="page"],
+    nav a:hover {
+      border-bottom: 2px solid white;
+      font-weight: 900;
+    }
+    .menu-btn {
+      border: 1px solid white;
+      width: 38px;
+      height: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 4px 7px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .menu-btn:hover {
+      background-color: rgba(255 255 255 / 0.1);
+    }
+    .menu-btn div {
+      width: 100%;
+      height: 2px;
+      background: white;
+      border-radius: 1px;
+    }
+
+    /* Fullscreen info box */
+    .fullscreen-info {
+      position: fixed;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(27, 29, 31, 0.82);
+      color: white;
+      font-weight: 500;
+      font-size: 0.85rem;
+      padding: 6px 14px;
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 900;
+      user-select: none;
+      font-family: 'Roboto', sans-serif;
+    }
+    .fullscreen-info kbd {
+      display: inline-block;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: 0.75rem;
+      font-family: monospace, monospace;
+      background: #1a1a1a;
+      color: white;
+      box-shadow: inset 0 -1px 0 #0b0b0b;
+      user-select: none;
+    }
+
+    /* HERO */
+    .hero {
+      margin-top: 75px; /* header height + spacing */
+      position: relative;
+      width: 100%;
+      height: 460px;
+      background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f71b8dd0-625b-451b-9558-84e006130def.png');
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      overflow: hidden;
+      font-family: 'Gentium Book Basic', serif;
+      font-style: italic;
+      font-size: 4rem;
+      letter-spacing: 0.02em;
+    }
+
+    /* Overlay text with subtle black gradient and layering */
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.45), transparent 60%);
+      z-index: 0;
+    }
+    .hero h1 {
+      position: relative;
+      z-index: 1;
+      user-select: none;
+      margin: 0;
+      text-shadow:
+        0 0 8px rgba(0,0,0,0.6),
+        2px 3px 6px rgba(0,0,0,0.5);
+    }
+
+    /* GALLERY IMAGES */
+    section.gallery-images {
+      display: flex;
+      width: 100%;
+      max-height: 400px;
+      overflow: hidden;
+      margin-top: 0;
+    }
+    section.gallery-images > div {
+      flex-grow: 1;
+      flex-basis: 0;
+      overflow: hidden;
+      position: relative;
+    }
+    section.gallery-images > div:not(:last-child) {
+      border-right: 1px solid #111;
+    }
+    section.gallery-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: middle;
+      transition: transform 0.4s ease;
+    }
+    section.gallery-images > div:hover img {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+
+    /* IMAGE LABELS */
+    .labels-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 50px;
+      background: #090909;
+      font-family: 'Gentium Book Basic', serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 1.15rem;
+      letter-spacing: 0.03em;
+      color: #ddd;
+      user-select: none;
+    }
+    .labels-row div {
+      flex: 1;
+      text-align: center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .header-left, nav {
+        font-size: 0.85rem;
+      }
+      .hero {
+        height: 300px;
+        font-size: 2.6rem;
+      }
+      section.gallery-images {
+        flex-direction: column;
+        max-height: none;
+      }
+      section.gallery-images > div {
+        width: 100%;
+        height: 200px;
+        border-right: none !important;
+        border-bottom: 1px solid #111;
+      }
+      .labels-row {
+        flex-direction: column;
+        font-size: 1rem;
+      }
+      .labels-row div {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header role="banner" aria-label="Site header with navigation">
+      <div class="header-left">
+        <div class="logo-icon" aria-hidden="true"></div>
+        <div class="logo-text" aria-label="Discovery Land Company Logo">
+          <span class="company-name">Discovery</span>
+          <span class="company-sub">LAND COMPANY</span>
+        </div>
+      </div>
+      <div class="fullscreen-info" aria-live="polite">
+        To exit full screen, press and hold <kbd>Esc</kbd>
+      </div>
+      <nav role="navigation" aria-label="Primary site navigation">
+        <a href="#" tabindex="0">Our Worlds</a>
+        <a href="#" tabindex="0">Experiences</a>
+        <a href="#" tabindex="0">Company</a>
+        <a href="#" aria-current="page" tabindex="0">Gallery</a>
+      </nav>
+      <button aria-label="Open menu" class="menu-btn">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="Hero banner with beach and golf course">
+        <h1>Gallery</h1>
+      </section>
+
+      <section class="gallery-images" aria-label="Gallery images showing landscapes, golf and wellness">
+        <div>
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2cbfd7c0-b8af-4f64-b077-b6dd6274b113.png" alt="A snowy mountain trail through tall pine trees overlooking a large blue lake under a clear blue sky" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+        <div>
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/644b4940-5bce-41ce-ac1c-e71d592a7ffd.png" alt="Two golfers walking on a sunlit green golf course with the sun setting behind the forest and hills in the distance" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+        <div>
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6c0260de-51e7-4ea4-aac2-c29d0747595f.png" alt="Close-up of a person receiving a shoulder massage by a massage therapist in a dimly lit wellness spa with soft bokeh lights in the background" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+      </section>
+
+      <section class="labels-row" aria-hidden="true">
+        <div>Landscapes</div>
+        <div>Golf</div>
+        <div>Wellness</div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
+
