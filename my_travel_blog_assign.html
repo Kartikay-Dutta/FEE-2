@@ -11,14 +11,24 @@
     header {
       background-color: rgb(61, 89, 199);
       color: white;
-      text-align: center;
-      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    header nav {
+      display: flex;
+      gap: 15px;
     }
 
     header nav a {
       color: white;
       text-decoration: none;
-      margin: 0 10px;
     }
 
     header nav a:hover {
@@ -36,6 +46,27 @@
       padding: 20px;
     }
 
+    /* Center intro section content */
+    #intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #intro img {
+      max-width: 1000px;
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    /* Table container centered */
+    #destinations {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     table {
       width: 60%;
       border-collapse: collapse;
@@ -48,24 +79,46 @@
       text-align: center;
     }
 
+    /* Quote styling */
     blockquote {
       font-style: italic;
       color: #555;
-      margin: 20px;
+      margin: 20px auto;
       padding-left: 15px;
       border-left: 4px solid #ccc;
+      max-width: 600px;
     }
 
+    /* Video centered with Flexbox */
+    section video {
+      display: block;
+      margin: 20px auto;
+    }
+
+    /* Form container centered */
+    #form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 300px;
+    }
+
+    form label, form p {
+      font-weight: bold;
+      text-align: left;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       background: #f2f2f2;
       padding: 10px;
-    }
-
-    /* Center the chrome dino image */
-    #intro img {
-      display: block;
-      margin: 0 auto;
     }
   </style>
 </head>
@@ -75,8 +128,8 @@
   <header>
     <h1>My Travel Blog</h1>
     <nav>
-      <a href="#intro">Home</a> |
-      <a href="#destinations">Top Destinations</a> |
+      <a href="#intro">Home</a>
+      <a href="#destinations">Top Destinations</a>
       <a href="#form">Plan Your Trip</a>
     </nav>
   </header>
@@ -87,7 +140,7 @@
   <section id="intro">
     <h2>Welcome to My Travel Blog</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatem commodi accusantium aut necessitatibus expedita.</p>
-    <img src="chrome_dino.jpg" alt="Beautiful travel view" width="1000">
+    <img src="chrome_dino.jpg" alt="Beautiful travel view">
   </section>
 
   <hr>
@@ -130,7 +183,7 @@
 
   <!-- Trip Video -->
   <section>
-    <h2>Watch My Latest Trip</h2>
+    <h2 style="text-align:center;">Watch My Latest Trip</h2>
     <video width="400" controls>
       <source src="nerd_radar.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -152,22 +205,22 @@
     <h2>Plan Your Next Trip</h2>
     <form>
       <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required><br><br>
+      <input type="text" id="name" name="name" required>
 
       <label for="destination">Destination Interest:</label>
       <select id="destination" name="destination">
         <option>Japan</option>
         <option>Italy</option>
         <option>Australia</option>
-      </select><br><br>
+      </select>
 
       <p>Type of Traveler:</p>
-      <input type="radio" name="traveler" value="solo"> Solo<br>
-      <input type="radio" name="traveler" value="family"> Family<br>
-      <input type="radio" name="traveler" value="group"> Group<br><br>
+      <label><input type="radio" name="traveler" value="solo"> Solo</label>
+      <label><input type="radio" name="traveler" value="family"> Family</label>
+      <label><input type="radio" name="traveler" value="group"> Group</label>
 
       <label for="email">Email ID:</label>
-      <input type="email" id="email" name="email" required><br><br>
+      <input type="email" id="email" name="email" required>
 
       <button type="submit">Submit</button>
     </form>
@@ -177,7 +230,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy;All rights reserved.</p>
+    <p>&copy; All rights reserved.</p>
   </footer>
 
 </body>
