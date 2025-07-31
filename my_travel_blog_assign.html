@@ -9,30 +9,40 @@
   <style>
     /* Header Styling */
     header {
-      background-color: rgb(61, 89, 199);
+      background: linear-gradient(90deg, rgb(61, 89, 199), rgb(80, 140, 230));
       color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     header h1 {
       margin: 0;
+      font-size: 24px;
+      letter-spacing: 1px;
     }
 
     header nav {
       display: flex;
-      gap: 15px;
+      gap: 20px;
     }
 
     header nav a {
       color: white;
       text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 5px;
+      transition: background 0.3s ease;
     }
 
     header nav a:hover {
-      text-decoration: underline;
+      background: rgba(255, 255, 255, 0.2);
     }
 
     /* General Styling */
@@ -40,10 +50,21 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
     }
 
     section, footer {
       padding: 20px;
+    }
+
+    /* Card style for sections */
+    .card {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 900px;
     }
 
     /* Center intro section content */
@@ -58,6 +79,7 @@
       max-width: 1000px;
       width: 100%;
       margin-top: 15px;
+      border-radius: 10px;
     }
 
     /* Table container centered */
@@ -68,7 +90,7 @@
     }
 
     table {
-      width: 60%;
+      width: 80%;
       border-collapse: collapse;
       margin: 10px 0;
     }
@@ -93,6 +115,8 @@
     section video {
       display: block;
       margin: 20px auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     /* Form container centered */
@@ -134,19 +158,15 @@
     </nav>
   </header>
 
-  <hr>
-
   <!-- Blog Introduction -->
-  <section id="intro">
+  <section id="intro" class="card">
     <h2>Welcome to My Travel Blog</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatem commodi accusantium aut necessitatibus expedita.</p>
     <img src="chrome_dino.jpg" alt="Beautiful travel view">
   </section>
 
-  <hr>
-
   <!-- Top 3 Travel Destinations -->
-  <section id="destinations">
+  <section id="destinations" class="card">
     <h2>Top 3 Travel Destinations</h2>
     <table>
       <tr>
@@ -172,17 +192,13 @@
     </table>
   </section>
 
-  <hr>
-
   <!-- Travel Quote -->
-  <blockquote>
+  <blockquote class="card">
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, sunt?"
   </blockquote>
 
-  <hr>
-
   <!-- Trip Video -->
-  <section>
+  <section class="card">
     <h2 style="text-align:center;">Watch My Latest Trip</h2>
     <video width="400" controls>
       <source src="nerd_radar.mp4" type="video/mp4">
@@ -190,18 +206,14 @@
     </video>
   </section>
 
-  <hr>
-
   <!-- Background Music -->
   <audio loop autoplay muted>
     <source src="Gogeta's Kamehameha (Hip Hop _ Trap REMIX).mp3" type="audio/mp3">
     Your browser does not support the audio tag.
   </audio>
 
-  <hr>
-
   <!-- Travel Form -->
-  <section id="form">
+  <section id="form" class="card">
     <h2>Plan Your Next Trip</h2>
     <form>
       <label for="name">Full Name:</label>
@@ -226,8 +238,6 @@
     </form>
   </section>
 
-  <hr>
-
   <!-- Footer -->
   <footer>
     <p>&copy; All rights reserved.</p>
@@ -235,3 +245,4 @@
 
 </body>
 </html>
+
