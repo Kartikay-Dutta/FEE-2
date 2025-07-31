@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Travel Blog</title>
+  <link rel="icon" href="google_favicon.png" type="image/png">
+
+  <style>
+    /* Header Styling */
+    header {
+      background-color: rgb(61, 89, 199);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    section, footer {
+      padding: 20px;
+    }
+
+    table {
+      width: 60%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+    }
+
+    blockquote {
+      font-style: italic;
+      color: #555;
+      margin: 20px;
+      padding-left: 15px;
+      border-left: 4px solid #ccc;
+    }
+
+    footer {
+      text-align: center;
+      background: #f2f2f2;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>My Travel Blog</h1>
+    <nav>
+      <a href="#intro">Home</a> |
+      <a href="#destinations">Top Destinations</a> |
+      <a href="#form">Plan Your Trip</a>
+    </nav>
+  </header>
+
+  <hr>
+
+  <!-- Blog Introduction -->
+  <section id="intro">
+    <h2>Welcome to My Travel Blog</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptatem commodi accusantium aut necessitatibus expedita.</p>
+    <img src="chrome_dino.jpg" alt="Beautiful travel view" width="400">
+  </section>
+
+  <hr>
+
+  <!-- Top 3 Travel Destinations -->
+  <section id="destinations">
+    <h2>Top 3 Travel Destinations</h2>
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Best Time to Visit</th>
+        <th>Language</th>
+      </tr>
+      <tr>
+        <td>Japan</td>
+        <td>Spring</td>
+        <td>Japanese</td>
+      </tr>
+      <tr>
+        <td>Italy</td>
+        <td>Summer</td>
+        <td>Italian</td>
+      </tr>
+      <tr>
+        <td>Australia</td>
+        <td>Winter</td>
+        <td>English</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <!-- Travel Quote -->
+  <blockquote>
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, sunt?"
+  </blockquote>
+
+  <hr>
+
+  <!-- Trip Video -->
+  <section>
+    <h2>Watch My Latest Trip</h2>
+    <video width="400" controls>
+      <source src="nerd_radar.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <hr>
+
+  <!-- Background Music -->
+  <audio loop autoplay muted>
+    <source src="C:\Users\Kartikay Dutta\OneDrive\Documents\Gogeta's Kamehameha (Hip Hop _ Trap REMIX).mp3" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+
+  <hr>
+
+  <!-- Travel Form -->
+  <section id="form">
+    <h2>Plan Your Next Trip</h2>
+    <form>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="destination">Destination Interest:</label>
+      <select id="destination" name="destination">
+        <option>Japan</option>
+        <option>Italy</option>
+        <option>Australia</option>
+      </select><br><br>
+
+      <p>Type of Traveler:</p>
+      <input type="radio" name="traveler" value="solo"> Solo<br>
+      <input type="radio" name="traveler" value="family"> Family<br>
+      <input type="radio" name="traveler" value="group"> Group<br><br>
+
+      <label for="email">Email ID:</label>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <hr>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy;All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
