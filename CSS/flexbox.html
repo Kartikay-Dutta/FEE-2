@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Example</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+    <div class="box">Box 4</div>
+    <div class="box">Box 5</div>
+    <div class="box">Box 6</div>
+    <div class="box">Box 7</div>
+    <div class="box">Box 8</div>
+    <div class="box">Box 9</div>
+    <div class="box">Box 10</div>
+    <div class="box">Box 11</div>
+    <div class="box">Box 12</div>
+    <div class="box">Box 7</div>
+    <div class="box">Box 8</div>
+    <div class="box">Box 9</div>
+    <div class="box">Box 10</div>
+    <div class="box">Box 11</div>
+    <div class="box">Box 12</div>
+    <div class="box">Box 7</div>
+    <div class="box">Box 8</div>
+    <div class="box">Box 9</div>
+    <div class="box">Box 10</div>
+    <div class="box">Box 11</div>
+    <div class="box">Box 12</div>
+  </div>
+
+  <style>
+    .container {
+      border: 3px solid green;
+      height: 90vh;
+      display: flex;          /* Enables Flexbox */
+      flex-wrap: wrap;        /* Wraps boxes to the next line if no space */
+      gap: 10px;              /* Adds space between boxes */
+      padding: 10px;
+
+      /* FLEX DIRECTION 
+      /* flex-direction: row;         /* Default - horizontal */
+      /* flex-direction: row-reverse; /* Horizontal but reversed */
+      /* flex-direction: column;      /* Vertical */
+      /* flex-direction: column-reverse; /* Vertical but reversed */
+
+      /* JUSTIFY CONTENT (horizontal alignment) */
+      /* justify-content: flex-start;  /* Aligns boxes to left (default) */
+      /* justify-content: flex-end;    /* Aligns boxes to right */
+      /* justify-content: center;      /* Centers boxes horizontally */
+      /* justify-content: space-between; /* Equal space between, no edges */
+      /* justify-content: space-around;  /* Equal space around boxes */
+      /* justify-content: space-evenly;  /* Perfectly equal spacing everywhere */
+
+      /* ALIGN ITEMS (vertical alignment if row) */
+      /* align-items: flex-start;  /* Align to top */
+      /* align-items: flex-end;    /* Align to bottom */
+      /* align-items: center;      /* Center vertically */
+      /* align-items: stretch;     /* Stretch to container height */
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;  /* Center text horizontally */
+      align-items: center;      /* Center text vertically */
+      font-weight: bold;
+
+      /* FLEX GROW/SHRINK/BASIS (uncomment to test) */
+      /* flex-grow: 1;   /* Boxes expand to fill extra space */
+      /* flex-shrink: 0; /* Boxes won't shrink smaller than their width */
+      /* flex-basis: 150px; /* Base width of boxes before growing/shrinking */
+    }
+  </style>
+
+</body>
+</html>
