@@ -21,7 +21,7 @@
 
 
 <!-- Image in the right -->
- <!DOCTYPE html>
+ <!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,4 +39,46 @@
     <img src="chrome_dino.jpg" alt="Example">
     <p>This text wraps around the floated image. The image is floated to the left</p>
 </body>
+</html> -->
+
+
+<!-- Using inherit -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Float Inherit Example</title>
+
+  <style>
+    .image-container {
+      float: right; /* Parent element has float */
+      /* optional width to avoid full-width block */
+      width: fit-content;
+    }
+
+    img {
+      float: inherit;       /* Image inherits float from .image-container */
+      margin-left: 15px;
+      width: 200px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container">
+    <img src="chrome_dino.jpg" alt="Example">
+  </div>
+
+  <p>
+    This text wraps around the floated image. The image is floated to the right using <code>inherit</code>.
+    You can float elements like this to create magazine-style layouts where text wraps around images.
+  </p>
+
+</body>
 </html>
+
