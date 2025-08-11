@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Example</title>
+    <style>
+        /* Change flex direction to column in portrait orientation */
+        @media (orientation: portrait) { 
+            .boxes {
+                flex-direction: column;
+            }
+        }
+
+        /* Make images full width on mobile devices */
+        @media (max-width: 600px) {
+            img {
+                width: 100%;
+                height: auto; /* keep aspect ratio */
+            }
+        }
+
+        body {
+            background-color: red;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 15px;
+        }
+
+        .boxes {
+            display: flex;
+        }
+
+        img {
+            max-width: 500px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Example image -->
+    <img src="chrome_dino.jpg" alt="Example">
+
+</body>
+</html>
