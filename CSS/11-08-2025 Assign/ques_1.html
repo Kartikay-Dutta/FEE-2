@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide Nav in Portrait</title>
+    <style>
+        /* Default styling for the navigation */
+        nav {
+            background: #333;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        /* Boxes */
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            margin: 15px;
+        }
+
+        .boxes {
+            display: flex;
+        }
+
+        /* Media query: Hide nav when in portrait */
+        @media (orientation: portrait) {
+            nav {
+                display: none;
+            }
+            .boxes {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Boxes -->
+    <div class="boxes">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
