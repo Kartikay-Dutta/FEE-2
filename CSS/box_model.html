@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @media(orientation: portrait){ 
+            .boxes{
+                flex-direction: column;
+            };
+        }
+    body{
+        background-color: red;
+    }
+    .box{
+        width: 200px;
+        height: 200px;
+        background-color: blue;
+        margin: 15px;
+    }
+    .boxes{
+        display: flex;
+    }
+    </style>
 </head>
-<body>
-    
+    <div class = "boxes">
+        <div class = "box"></div>
+        <div class = "box"></div>
+        <div class = "box"></div>
+    </div>
 </body>
-</html>  
+</html>
