@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar styles */
+        nav {
+            background-color: #000000;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Hamburger icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 4px 0;
+            border-radius: 2px;
+        }
+
+        /* Mobile view */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #0077cc;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                padding: 10px 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("show");
+        }
+    </script>
+
+    <h1 style="padding:20px;">Here kitty, you can have a hamburger</h1>
+    <p style="padding:20px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, blanditiis quod rem modi fuga unde accusantium, cupiditate quas iste, explicabo ducimus? Maiores distinctio sunt ipsum illo! Earum adipisci pariatur, cupiditate illum architecto soluta nisi voluptates reiciendis expedita facere aliquam in ad iste fugiat ducimus! Officiis, provident. Suscipit molestiae rem excepturi debitis eligendi voluptatibus voluptate delectus cumque cupiditate ea dignissimos, quasi accusamus iste voluptatum soluta autem voluptas ullam culpa sunt provident eius animi modi reiciendis accusantium? Provident molestiae vel eos dolor perspiciatis saepe expedita quia minus enim, quibusdam sed autem reiciendis cum blanditiis fugiat corporis quas doloremque consequatur sequi, rem magni veniam vitae vero? Beatae quos necessitatibus molestiae fugit, deleniti minima blanditiis nulla quam inventore minus error, adipisci consectetur eligendi ullam maiores hic illo obcaecati officiis facilis quo, sed velit dolorem. Aut, iste exercitationem tenetur nesciunt quis nemo aspernatur illum atque deleniti a hic voluptas voluptate, recusandae tempora doloribus inventore aperiam pariatur vero laborum aliquid, quae ab cupiditate temporibus. Atque officiis dolore architecto itaque vero, dignissimos doloribus ea eligendi nisi similique fuga praesentium at deserunt placeat debitis laboriosam! Itaque sit nemo quasi dolorum ab suscipit hic accusantium dolor consequuntur aut necessitatibus ipsam odio natus voluptatum, alias, nobis cupiditate officia asperiores ea repellendus? Voluptate beatae possimus unde vero, molestiae molestias suscipit aut. Inventore adipisci, minima cum maxime sunt possimus odit similique? Odio nam harum doloremque. Vel perspiciatis non quaerat est quod laborum consectetur ducimus sed voluptatem facilis exercitationem animi, distinctio quia accusamus laboriosam reiciendis architecto debitis, fugiat quae eos soluta. Quos, minima laudantium officiis eveniet repellendus mollitia nihil nobis atque ullam itaque iste reprehenderit, laborum accusamus velit voluptatum quaerat praesentium eum ex? Laboriosam praesentium deleniti totam quam labore neque quos eum asperiores nobis itaque. Esse optio quod ea iusto asperiores amet et voluptas, itaque distinctio recusandae ratione dicta magni atque tenetur aliquam, fugit saepe dolor quae facilis quam minima quibusdam beatae aliquid molestias. Iure molestias, voluptate optio nobis quas in soluta unde laborum ut repudiandae, fugit maiores quaerat deserunt! Amet possimus cumque laborum quis autem, fugit perspiciatis. Unde, reiciendis. Numquam sapiente voluptatem tempora tenetur est dolorum quia deserunt similique totam, animi hic voluptatum ea error ullam aspernatur voluptate at facere nobis iste quidem praesentium esse! Iste suscipit mollitia officiis quae sapiente, natus quos, porro velit eum sint aliquid possimus quo libero minus totam, dolore sed perferendis voluptatem? Praesentium neque illo quasi minima. Explicabo nesciunt eaque distinctio assumenda aliquam similique doloribus culpa excepturi? Labore voluptatibus ipsum quis doloribus tenetur fuga aliquid corrupti, consectetur, dolorum, accusamus minus aperiam quasi temporibus qui soluta pariatur. Illum eligendi omnis nemo a repellendus officiis porro culpa, ea assumenda veritatis nulla corporis inventore expedita sint nesciunt eius temporibus, reprehenderit doloremque, earum eum repellat sit aspernatur aliquam eos. Cum, similique fugiat provident natus beatae labore quia illo accusamus dignissimos at cumque voluptatem minus nihil. Perferendis sint rem quisquam dolore similique atque ducimus, in aspernatur ex, ratione earum cupiditate voluptate magnam reiciendis! Accusantium velit odit assumenda aliquid officiis inventore illo deleniti est, perspiciatis tempora error provident, pariatur, quam repudiandae sed soluta? Mollitia, tempora sapiente cumque amet ea voluptate iure fugit voluptates molestiae, porro aspernatur provident alias animi eum ipsum iste perferendis hic dolorem aliquam reprehenderit! Debitis molestiae aut deserunt aspernatur sunt possimus doloremque odio deleniti et, quibusdam architecto dolores reprehenderit aliquam harum omnis perspiciatis beatae vero illum, officia fugiat, numquam animi! Sit quas quo amet aliquam temporibus culpa asperiores nobis architecto fugiat, quasi neque tenetur deserunt voluptas consequatur esse aspernatur quia unde ipsa dolorem sapiente perspiciatis minima autem? Harum, saepe ab iusto sequi maxime qui facere totam? Illum quia hic sapiente tempora quos, quasi quis veritatis inventore unde distinctio, alias adipisci nulla nihil molestiae eaque sed accusamus tenetur voluptatum impedit? Atque quas quam veritatis qui labore commodi dolorum debitis impedit, ut dolore porro vero sed voluptates cupiditate consequatur voluptatum nulla nihil nemo aut accusamus provident itaque optio vel? Aperiam sunt nulla magnam. Sint consequuntur iste minus fuga dolorem aliquam natus, vitae numquam vel molestiae repudiandae tempore harum deleniti corrupti. Fuga sapiente sint perspiciatis necessitatibus? Deserunt aliquam molestias, commodi laborum quod at, praesentium minus, odio vitae ducimus voluptate! Repellendus reiciendis ex, obcaecati ab velit dolores, recusandae modi quia aperiam impedit ipsam odit temporibus commodi repudiandae consectetur reprehenderit necessitatibus pariatur eius, vel quas saepe neque maxime nihil perferendis. Nam suscipit quas voluptates? Animi eos quaerat quas sapiente. Id, commodi dignissimos deleniti harum tenetur maiores nihil eos porro ipsum quasi delectus itaque nam dicta illum fugit veniam impedit optio. Magnam repellendus porro vero maxime, quo, ad, minus voluptatum iste sit mollitia sapiente! Dolorem ut animi odit magnam sit, obcaecati laboriosam placeat voluptatum libero sunt odio soluta tenetur eius nemo incidunt quae consectetur ea est porro sequi deleniti eveniet. Enim fugit facilis deserunt! Explicabo, vitae! Eveniet, rem sunt! Odit, dolorem. Sed placeat ex, mollitia totam nobis obcaecati minus corrupti necessitatibus aperiam voluptatibus nesciunt id fugiat repellendus sunt animi ullam esse ut unde dolore quibusdam earum ratione corporis recusandae quam. Distinctio delectus quae beatae blanditiis corporis laudantium id vero dicta doloremque. Earum corrupti facilis neque voluptatum et harum totam provident in nemo impedit? Temporibus nemo maiores eaque ad asperiores alias commodi soluta, ipsum saepe dolorem qui eius quasi voluptatum, quibusdam maxime? Optio officia sed eaque magnam veritatis explicabo impedit rem cum hic ducimus quaerat earum, nihil debitis architecto obcaecati odit, commodi vero dignissimos. Ut aut nesciunt esse neque aperiam mollitia sequi blanditiis perferendis debitis officia quod, aliquam eligendi, quibusdam ad, ipsam excepturi vel asperiores nihil iste minima! Suscipit labore ex, debitis architecto pariatur eveniet inventore sed est quas iusto tempore, nam possimus explicabo sequi sapiente! Atque eligendi voluptate inventore soluta ut praesentium dignissimos temporibus, eius pariatur repellendus mollitia exercitationem? Neque voluptatum numquam dolor! Ipsam officia eligendi dignissimos, iusto quis qui quidem aliquid? Reiciendis, hic. Obcaecati velit eaque similique eligendi? Eum, iste ad? Impedit voluptas doloremque modi inventore fuga repudiandae minus non consequatur sint vero? Incidunt amet ratione minima laborum harum, dignissimos cum necessitatibus veritatis tempora! Doloribus enim necessitatibus natus iste, dolorem non dolor? Ab, ipsam magni explicabo odio corporis odit architecto mollitia aspernatur tenetur adipisci eaque!.</p>
+
+</body>
+</html>
